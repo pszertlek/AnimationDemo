@@ -13,6 +13,7 @@
 		F4E2DDDF1BCE2CE600E8F357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DDDD1BCE2CE600E8F357 /* Main.storyboard */; };
 		F4E2DDE11BCE2CE600E8F357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DDE01BCE2CE600E8F357 /* Assets.xcassets */; };
 		F4E2DDE41BCE2CE600E8F357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DDE21BCE2CE600E8F357 /* LaunchScreen.storyboard */; };
+		F4E2DDED1BCE2DA000E8F357 /* fdsfd.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDEC1BCE2DA000E8F357 /* fdsfd.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F4E2DDE01BCE2CE600E8F357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4E2DDE31BCE2CE600E8F357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4E2DDE51BCE2CE600E8F357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E2DDEB1BCE2DA000E8F357 /* fdsfd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fdsfd.h; sourceTree = "<group>"; };
+		F4E2DDEC1BCE2DA000E8F357 /* fdsfd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fdsfd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				F4E2DDD81BCE2CE600E8F357 /* AppDelegate.m */,
 				F4E2DDDA1BCE2CE600E8F357 /* ViewController.h */,
 				F4E2DDDB1BCE2CE600E8F357 /* ViewController.m */,
+				F4E2DDEB1BCE2DA000E8F357 /* fdsfd.h */,
+				F4E2DDEC1BCE2DA000E8F357 /* fdsfd.m */,
 				F4E2DDDD1BCE2CE600E8F357 /* Main.storyboard */,
 				F4E2DDE01BCE2CE600E8F357 /* Assets.xcassets */,
 				F4E2DDE21BCE2CE600E8F357 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E2DDDC1BCE2CE600E8F357 /* ViewController.m in Sources */,
+				F4E2DDED1BCE2DA000E8F357 /* fdsfd.m in Sources */,
 				F4E2DDD91BCE2CE600E8F357 /* AppDelegate.m in Sources */,
 				F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */,
 			);
