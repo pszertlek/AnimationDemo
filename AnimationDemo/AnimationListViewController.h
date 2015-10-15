@@ -1,5 +1,5 @@
 //
-//  fdsfd.h
+//  AnimationListViewController.h
 //  AnimationDemo
 //
 //  Created by Coco on 15/10/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface fdsfd : UIView
+@interface AnimationListViewController : UITableViewController
 
 @end
