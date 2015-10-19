@@ -7,16 +7,21 @@
 //
 
 #import "AnimationListViewController.h"
+#import "GooeySlideMenu.h"
+#import "PushControl.h"
+#import "ViewController.h"
 
 @interface AnimationListViewController ()
 
+@property (nonatomic, strong) GooeySlideMenu *menu;
 @end
 
 @implementation AnimationListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _menu = [[GooeySlideMenu alloc]initWithTitles:@[@"首页",@"消息",@"发布",@"发现",@"个人",@"设置"]];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,23 +36,17 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {
+        [_menu trigger];
+    }
+    else{
+        UIViewController *vc = [[ViewController alloc]init];
+//        [self addChildViewController:vc];
+        [[PushControl shared]ssss:vc];
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+    }
 }
 
 

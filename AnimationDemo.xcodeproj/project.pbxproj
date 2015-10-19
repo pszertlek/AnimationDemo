@@ -14,6 +14,9 @@
 		F4E2DDE11BCE2CE600E8F357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DDE01BCE2CE600E8F357 /* Assets.xcassets */; };
 		F4E2DDE41BCE2CE600E8F357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DDE21BCE2CE600E8F357 /* LaunchScreen.storyboard */; };
 		F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDEF1BCE2E6800E8F357 /* AnimationListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */; settings = {ASSET_TAGS = (); }; };
+		F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */; settings = {ASSET_TAGS = (); }; };
+		F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766871BD0F4B500FA8C2E /* PushControl.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		F4E2DDE51BCE2CE600E8F357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4E2DDEE1BCE2E6800E8F357 /* AnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationListViewController.h; sourceTree = "<group>"; };
 		F4E2DDEF1BCE2E6800E8F357 /* AnimationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationListViewController.m; sourceTree = "<group>"; };
+		F4E766801BD0ED1000FA8C2E /* GooeySlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooeySlideMenu.h; sourceTree = "<group>"; };
+		F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooeySlideMenu.m; sourceTree = "<group>"; };
+		F4E766821BD0ED1800FA8C2E /* SlideMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuButton.h; sourceTree = "<group>"; };
+		F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuButton.m; sourceTree = "<group>"; };
+		F4E766861BD0F4B500FA8C2E /* PushControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushControl.h; sourceTree = "<group>"; };
+		F4E766871BD0F4B500FA8C2E /* PushControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +70,15 @@
 		F4E2DDD31BCE2CE600E8F357 /* AnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F4E7667F1BD0ECFB00FA8C2E /* GooeySlideMenu */,
 				F4E2DDD71BCE2CE600E8F357 /* AppDelegate.h */,
 				F4E2DDD81BCE2CE600E8F357 /* AppDelegate.m */,
 				F4E2DDDA1BCE2CE600E8F357 /* ViewController.h */,
 				F4E2DDDB1BCE2CE600E8F357 /* ViewController.m */,
 				F4E2DDEE1BCE2E6800E8F357 /* AnimationListViewController.h */,
 				F4E2DDEF1BCE2E6800E8F357 /* AnimationListViewController.m */,
+				F4E766861BD0F4B500FA8C2E /* PushControl.h */,
+				F4E766871BD0F4B500FA8C2E /* PushControl.m */,
 				F4E2DDDD1BCE2CE600E8F357 /* Main.storyboard */,
 				F4E2DDE01BCE2CE600E8F357 /* Assets.xcassets */,
 				F4E2DDE21BCE2CE600E8F357 /* LaunchScreen.storyboard */,
@@ -82,6 +94,17 @@
 				F4E2DDD51BCE2CE600E8F357 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4E7667F1BD0ECFB00FA8C2E /* GooeySlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */,
+				F4E766821BD0ED1800FA8C2E /* SlideMenuButton.h */,
+				F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */,
+				F4E766801BD0ED1000FA8C2E /* GooeySlideMenu.h */,
+			);
+			name = GooeySlideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */,
 				F4E2DDDC1BCE2CE600E8F357 /* ViewController.m in Sources */,
+				F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */,
 				F4E2DDD91BCE2CE600E8F357 /* AppDelegate.m in Sources */,
 				F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */,
 				F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */,
+				F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +332,7 @@
 				F4E2DDEA1BCE2CE600E8F357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
