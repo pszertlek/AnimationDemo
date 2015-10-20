@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F48989971BD627EE00F35F71 /* KYSlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989961BD627EE00F35F71 /* KYSlideMenuButton.m */; settings = {ASSET_TAGS = (); }; };
+		F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989991BD6280500F35F71 /* KYGooeySlideMenu.m */; settings = {ASSET_TAGS = (); }; };
 		F4E18DD71BD52C1E00A4692B /* KYCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E18DD61BD52C1E00A4692B /* KYCircleLayer.m */; settings = {ASSET_TAGS = (); }; };
 		F4E18DDA1BD52C3A00A4692B /* KYCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E18DD91BD52C3A00A4692B /* KYCircleView.m */; settings = {ASSET_TAGS = (); }; };
 		F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDD51BCE2CE600E8F357 /* main.m */; };
@@ -22,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F48989921BD5F18000F35F71 /* KYCircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleAnimationViewController.h; sourceTree = "<group>"; };
+		F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCircleAnimationViewController.m; sourceTree = "<group>"; };
+		F48989951BD627EE00F35F71 /* KYSlideMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYSlideMenuButton.h; sourceTree = "<group>"; };
+		F48989961BD627EE00F35F71 /* KYSlideMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYSlideMenuButton.m; sourceTree = "<group>"; };
+		F48989981BD6280500F35F71 /* KYGooeySlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYGooeySlideMenu.h; sourceTree = "<group>"; };
+		F48989991BD6280500F35F71 /* KYGooeySlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYGooeySlideMenu.m; sourceTree = "<group>"; };
 		F4E18DD51BD52C1E00A4692B /* KYCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleLayer.h; sourceTree = "<group>"; };
 		F4E18DD61BD52C1E00A4692B /* KYCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCircleLayer.m; sourceTree = "<group>"; };
 		F4E18DD81BD52C3A00A4692B /* KYCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleView.h; sourceTree = "<group>"; };
@@ -64,15 +73,21 @@
 				F4E18DD61BD52C1E00A4692B /* KYCircleLayer.m */,
 				F4E18DD81BD52C3A00A4692B /* KYCircleView.h */,
 				F4E18DD91BD52C3A00A4692B /* KYCircleView.m */,
+				F48989921BD5F18000F35F71 /* KYCircleAnimationViewController.h */,
+				F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */,
 			);
 			name = AnimatedCircleDemo;
 			sourceTree = "<group>";
 		};
-		F4E18DC51BD4BB0200A4692B /* New Group1 */ = {
+		F4E18DC51BD4BB0200A4692B /* SlideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F48989951BD627EE00F35F71 /* KYSlideMenuButton.h */,
+				F48989961BD627EE00F35F71 /* KYSlideMenuButton.m */,
+				F48989981BD6280500F35F71 /* KYGooeySlideMenu.h */,
+				F48989991BD6280500F35F71 /* KYGooeySlideMenu.m */,
 			);
-			name = "New Group1";
+			name = SlideMenu;
 			sourceTree = "<group>";
 		};
 		F4E18DC61BD4BB0400A4692B /* New Group2 */ = {
@@ -134,7 +149,7 @@
 				F4E18DC81BD4BB0700A4692B /* New Group4 */,
 				F4E18DC71BD4BB0500A4692B /* New Group3 */,
 				F4E18DC61BD4BB0400A4692B /* New Group2 */,
-				F4E18DC51BD4BB0200A4692B /* New Group1 */,
+				F4E18DC51BD4BB0200A4692B /* SlideMenu */,
 				F4E18DC41BD4BAFF00A4692B /* AnimatedCircleDemo */,
 				F4E7667F1BD0ECFB00FA8C2E /* GooeySlideMenu */,
 				F4E2DDD71BCE2CE600E8F357 /* AppDelegate.h */,
@@ -248,9 +263,12 @@
 				F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */,
 				F4E2DDD91BCE2CE600E8F357 /* AppDelegate.m in Sources */,
 				F4E18DDA1BD52C3A00A4692B /* KYCircleView.m in Sources */,
+				F48989971BD627EE00F35F71 /* KYSlideMenuButton.m in Sources */,
 				F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */,
 				F4E18DD71BD52C1E00A4692B /* KYCircleLayer.m in Sources */,
+				F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */,
 				F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */,
+				F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */,
 				F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

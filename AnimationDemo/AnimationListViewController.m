@@ -10,23 +10,31 @@
 #import "GooeySlideMenu.h"
 #import "PushControl.h"
 #import "ViewController.h"
+#import "KYGooeySlideMenu.h"
 
 @interface AnimationListViewController ()
 
-@property (nonatomic, strong) GooeySlideMenu *menu;
+@property (nonatomic, strong) KYGooeySlideMenu *menu;
 @end
 
 @implementation AnimationListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _menu = [[GooeySlideMenu alloc]initWithTitles:@[@"首页",@"消息",@"发布",@"发现",@"个人",@"设置"]];
+    _menu = [[KYGooeySlideMenu alloc]initWithTitles:@[@"首页",@"消息",@"发布",@"发现",@"个人",@"设置"]];
 
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc]initWithTitle:@"menu" style:UIBarButtonItemStyleDone target:self action:@selector(menuTrigger:)];
+    self.navigationItem.leftBarButtonItem = barButton;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)menuTrigger:(id)sender
+{
+    [_menu trigger];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,19 +43,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == 1) {
-        [_menu trigger];
-    }
-    else{
-        UIViewController *vc = [[ViewController alloc]init];
-//        [self addChildViewController:vc];
-        [[PushControl shared]ssss:vc];
-
-    }
-}
 
 
 /*

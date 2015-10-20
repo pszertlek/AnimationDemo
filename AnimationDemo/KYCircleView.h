@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "KYCircleLayer.h"
 @interface KYCircleView : UIView
 
+@property (nonatomic, strong) KYCircleLayer *circleLayer;
+
+@property (nonatomic ,assign) CGFloat progress;
 @end

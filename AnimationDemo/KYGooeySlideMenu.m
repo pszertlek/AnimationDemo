@@ -1,30 +1,22 @@
 //
-//  GooeySlideMenu.m
-//  GooeySlideMenuDemo
+//  KYGooeySlideMenu.m
+//  AnimationDemo
 //
-//  Created by Kitten Yang on 15/8/11.
-//  Copyright (c) 2015年 Kitten Yang. All rights reserved.
+//  Created by Coco on 15/10/20.
+//  Copyright © 2015年 Pszertlek. All rights reserved.
 //
 
-#import "GooeySlideMenu.h"
+#import "KYGooeySlideMenu.h"
 #import "SlideMenuButton.h"
-
 
 #define SPACE 30
 #define EXTRAAREA 50
 #define BUTTONHEIGHT 40
 
-@interface GooeySlideMenu()
-
-@property (nonatomic,strong) CADisplayLink *displayLink;
-@property  NSInteger animationCount; // 动画的数量
-
-@end
-
-@implementation GooeySlideMenu{
-    
+@interface KYGooeySlideMenu()
+{
     UIView *helperCenterView;
-    UIView *helperSideView;
+    UIView *helperSlideView;
     UIVisualEffectView *blurView;
     UIWindow *keyWindow;
     BOOL triggered;
@@ -32,6 +24,14 @@
     UIColor *_menuColor;
 }
 
+@property (nonatomic, strong) CADisplayLink *displayLink;
+@property (nonatomic, assign) NSInteger animationCount;
+
+
+@end
+
+
+@implementation KYGooeySlideMenu
 
 -(id)initWithTitles:(NSArray *)titles{
     
@@ -39,45 +39,38 @@
 }
 
 
--(id)initWithTitles:(NSArray *)titles withButtonHeight:(CGFloat)height withMenuColor:(UIColor *)menuColor withBackBlurStyle:(UIBlurEffectStyle)style{
-    
-    self = [super init];
-    if (self) {
-        
-        keyWindow = [[UIApplication sharedApplication]keyWindow];
-        
+- (instancetype)initWithTitles:(NSArray *)titles withButtonHeight:(CGFloat)height withMenuColor:(UIColor *)menuColor withBackBlurStyle:(UIBlurEffectStyle)style
+{
+    if (self = [super init]) {
+        keyWindow = [UIApplication sharedApplication].keyWindow;
         blurView = [[UIVisualEffectView alloc]initWithEffect:[UIBlurEffect effectWithStyle:style]];
         blurView.frame = keyWindow.frame;
         blurView.alpha = 0.0f;
         
-        helperSideView = [[UIView alloc]initWithFrame:CGRectMake(-40, 0, 40, 40)];
-        helperSideView.backgroundColor = [UIColor redColor];
-        helperSideView.hidden = NO;
-        [keyWindow addSubview:helperSideView];
+        helperSlideView = [[UIView alloc]initWithFrame:CGRectMake(-40, 0, 40, 40)];
+        helperSlideView.backgroundColor = [UIColor redColor];
+        helperSlideView.hidden = NO;
+        [keyWindow addSubview:helperSlideView];
         
-        helperCenterView = [[UIView alloc]initWithFrame:CGRectMake(-40, CGRectGetHeight(keyWindow.frame)/2 - 20, 40, 40)];
+        helperCenterView = [[UIView alloc]initWithFrame:CGRectMake(-40, keyWindow.frame.size.height/2 - 20, 40, 40)];
         helperCenterView.backgroundColor = [UIColor yellowColor];
         helperCenterView.hidden = NO;
         [keyWindow addSubview:helperCenterView];
         
-        
-        self.frame = CGRectMake(- keyWindow.frame.size.width/2 - EXTRAAREA, 0, keyWindow.frame.size.width/2+EXTRAAREA, keyWindow.frame.size.height);
+        self.frame = CGRectMake(-keyWindow.frame.size.width/2 - EXTRAAREA, 0, keyWindow.frame.size.width / 2 + EXTRAAREA, keyWindow.frame.size.height);
         self.backgroundColor = [UIColor clearColor];
-        [keyWindow insertSubview:self belowSubview:helperSideView];
+        [keyWindow insertSubview:self belowSubview:helperSlideView];
         
         _menuColor = menuColor;
         self.menuButtonHeight = height;
         [self addButtons:titles];
         
     }
-    
     return self;
 }
 
-
-
 -(void)addButtons:(NSArray *)titles{
-
+    
     
     
     if (titles.count % 2 == 0) {
@@ -85,12 +78,12 @@
         NSInteger index_down = titles.count/2;
         NSInteger index_up = -1;
         for (NSInteger i = 0; i < titles.count; i++) {
-
-
+            
+            
             NSString *title = titles[i];
             SlideMenuButton *home_button = [[SlideMenuButton alloc]initWithTitle:title];
             if (i >= titles.count / 2) {
-
+                
                 index_up ++;
                 home_button.center = CGPointMake(keyWindow.frame.size.width/4, keyWindow.frame.size.height/2 + self.menuButtonHeight*index_up + SPACE*index_up + SPACE/2 + self.menuButtonHeight/2);
             }else{
@@ -106,7 +99,7 @@
             __weak typeof(self) WeakSelf = self;
             
             home_button.buttonClickBlock = ^(){
-              
+                
                 [WeakSelf tapToUntrigger:nil];
                 if (WeakSelf.menuClickBlock) {
                     WeakSelf.menuClickBlock(i,title,titles.count);
@@ -115,8 +108,8 @@
             
         }
         
-
-
+        
+        
         
         
     }else{
@@ -141,109 +134,60 @@
             
         }
     }
-    
-    
-    
-    
-}
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(0, 0)];
-    [path addLineToPoint:CGPointMake(self.frame.size.width-EXTRAAREA, 0)];
-    
-    [path addQuadCurveToPoint:CGPointMake(self.frame.size.width-EXTRAAREA, self.frame.size.height) controlPoint:CGPointMake(keyWindow.frame.size.width/2+diff, keyWindow.frame.size.height/2)];
-
-    [path addLineToPoint:CGPointMake(0, self.frame.size.height)];
-    [path closePath];
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextAddPath(context, path.CGPath);
-    [_menuColor set];
-    CGContextFillPath(context);
-
 }
 
 
-
--(void)trigger{
-    
-
+- (void)trigger
+{
     if (!triggered) {
-        
         [keyWindow insertSubview:blurView belowSubview:self];
-        
-
         [UIView animateWithDuration:0.3 animations:^{
-        
             self.frame = self.bounds;
-        
         }];
-        
         [self beforeAnimation];
-        [UIView animateWithDuration:0.7 delay:0.0f usingSpringWithDamping:0.5f initialSpringVelocity:0.9f options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction animations:^{
-            
-            helperSideView.center = CGPointMake(keyWindow.center.x, helperSideView.frame.size.height/2);
-            
+        [UIView animateWithDuration:0.7 delay:0.0f usingSpringWithDamping:0.5f initialSpringVelocity:0.9f options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction animations:^{
+            helperSlideView.center = CGPointMake(keyWindow.center.x, helperSlideView.frame.size.height/2);
         } completion:^(BOOL finished) {
             [self finishAnimation];
         }];
-    
         [UIView animateWithDuration:0.3 animations:^{
-            blurView.alpha = 1.0f;
-            
+            blurView.alpha = 0.8f;
         }];
-        
-        
         [self beforeAnimation];
-        [UIView animateWithDuration:0.7 delay:0.0f usingSpringWithDamping:0.8f initialSpringVelocity:2.0f options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction animations:^{
-            
+        [UIView animateWithDuration:0.7 delay:0.0 usingSpringWithDamping:0.8f initialSpringVelocity:2.0f options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction animations:^{
             helperCenterView.center = keyWindow.center;
-            
         } completion:^(BOOL finished) {
             if (finished) {
                 UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToUntrigger:)];
                 [blurView addGestureRecognizer:tapGes];
                 
                 [self finishAnimation];
+
             }
         }];
-        
-
-        [self animateButtons];
-        
         triggered = YES;
-        
-    }else{
-        
+
+    }
+    else{
         [self tapToUntrigger:nil];
     }
-    
 }
 
-
--(void)animateButtons{
-    
-    
-    for (NSInteger i = 0; i < self.subviews.count; i++) {
-        
-        UIView *menuButton = self.subviews[i];
-        menuButton.transform = CGAffineTransformMakeTranslation(-90, 0);
-        
-        [UIView animateWithDuration:0.7 delay:i*(0.3/self.subviews.count) usingSpringWithDamping:0.6f initialSpringVelocity:0.0f options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction animations:^{
-            
-            menuButton.transform =  CGAffineTransformIdentity;
-            
-        } completion:NULL];
-        
+-(void)beforeAnimation{
+    if (self.displayLink == nil) {
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkAction:)];
+        [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
-
-    
+    self.animationCount ++;
 }
 
+-(void)finishAnimation{
+    self.animationCount --;
+    if (self.animationCount == 0) {
+        [self.displayLink invalidate];
+        self.displayLink = nil;
+    }
+}
 
 -(void)tapToUntrigger:(UIButton *)sender{
     
@@ -256,14 +200,14 @@
     [self beforeAnimation];
     [UIView animateWithDuration:0.7 delay:0.0f usingSpringWithDamping:0.6f initialSpringVelocity:0.9f options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction animations:^{
         
-        helperSideView.center = CGPointMake(-helperSideView.frame.size.height/2, helperSideView.frame.size.height/2);
+        helperSlideView.center = CGPointMake(-helperSlideView.frame.size.height/2, helperSlideView.frame.size.height/2);
         
     } completion:^(BOOL finished) {
         [self finishAnimation];
     }];
     
     [UIView animateWithDuration:0.3 animations:^{
-
+        
         blurView.alpha = 0.0f;
         
     }];
@@ -271,7 +215,7 @@
     [self beforeAnimation];
     [UIView animateWithDuration:0.7 delay:0.0f usingSpringWithDamping:0.7f initialSpringVelocity:2.0f options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction animations:^{
         
-        helperCenterView.center = CGPointMake(-helperSideView.frame.size.height/2, CGRectGetHeight(keyWindow.frame)/2);
+        helperCenterView.center = CGPointMake(-helperSlideView.frame.size.height/2, CGRectGetHeight(keyWindow.frame)/2);
         
     } completion:^(BOOL finished) {
         [self finishAnimation];
@@ -281,48 +225,28 @@
     
 }
 
-
-
-//动画之前调用
--(void)beforeAnimation{
-    if (self.displayLink == nil) {
-        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkAction:)];
-        [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    }
-    self.animationCount ++;
-}
-
-//动画完成之后调用
--(void)finishAnimation{
-    self.animationCount --;
-    if (self.animationCount == 0) {
-        [self.displayLink invalidate];
-        self.displayLink = nil;
-    }
-}
-
-
-
--(void)displayLinkAction:(CADisplayLink *)dis{
-    
-    CALayer *sideHelperPresentationLayer   =  (CALayer *)[helperSideView.layer presentationLayer];
-    CALayer *centerHelperPresentationLayer =  (CALayer *)[helperCenterView.layer presentationLayer];
-
-    CGRect centerRect = [[centerHelperPresentationLayer valueForKeyPath:@"frame"]CGRectValue];
-    CGRect sideRect = [[sideHelperPresentationLayer valueForKeyPath:@"frame"]CGRectValue];
-    
-    
-    diff = sideRect.origin.x - centerRect.origin.x;
-    
+- (void)displayLinkAction:(CADisplayLink *)dis{
+    CALayer *sideLayer = [helperSlideView.layer presentationLayer];
+    CALayer *centerLayer = [helperCenterView.layer presentationLayer];
+    diff = sideLayer.frame.origin.x - centerLayer.frame.origin.x;
     [self setNeedsDisplay];
-    
 }
 
+- (void)drawRect:(CGRect)rect
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 0)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width-EXTRAAREA, 0)];
+    
+    [path addQuadCurveToPoint:CGPointMake(self.frame.size.width-EXTRAAREA, self.frame.size.height) controlPoint:CGPointMake(keyWindow.frame.size.width/2+diff, keyWindow.frame.size.height/2)];
+    
+    [path addLineToPoint:CGPointMake(0, self.frame.size.height)];
+    [path closePath];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextAddPath(context, path.CGPath);
+    [_menuColor set];
+    CGContextFillPath(context);
+}
 
 @end
-
-
-
-
-
-

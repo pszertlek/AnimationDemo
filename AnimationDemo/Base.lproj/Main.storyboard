@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yJT-BS-xYo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -22,7 +23,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kM4-Kw-r7e">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="circleAnimation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kM4-Kw-r7e">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -31,6 +32,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="YMZ-Su-62L" kind="show" id="UtI-AU-KPu"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bkG-MY-drK" style="IBUITableViewCellStyleDefault" id="rjj-9G-aFL">
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
@@ -198,6 +202,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1P-D9-Mu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="700" y="590"/>
+        </scene>
+        <!--Circle Animation View Controller-->
+        <scene sceneID="3Eh-XB-DJj">
+            <objects>
+                <viewController storyboardIdentifier="KYCircleAnimationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YMZ-Su-62L" customClass="KYCircleAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pvs-zZ-coQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aMd-j5-wCJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="egv-PZ-jbn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGk-jK-HdP" customClass="KYCircleView">
+                                <rect key="frame" x="0.0" y="200" width="300" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ILc-Wm-FlD"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="37v-SQ-A6R">
+                                <rect key="frame" x="241" y="491" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="jcc-jd-GfD"/>
+                                    <constraint firstAttribute="height" constant="30" id="qPc-Wz-jbZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="YMZ-Su-62L" eventType="valueChanged" id="NXe-j7-1SP"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aMd-j5-wCJ" firstAttribute="top" secondItem="37v-SQ-A6R" secondAttribute="bottom" constant="79" id="Coj-GY-Xbf"/>
+                            <constraint firstItem="37v-SQ-A6R" firstAttribute="centerX" secondItem="egv-PZ-jbn" secondAttribute="centerX" id="JUj-JZ-m2h"/>
+                            <constraint firstItem="xGk-jK-HdP" firstAttribute="centerY" secondItem="egv-PZ-jbn" secondAttribute="centerY" id="Sj8-FX-Quw"/>
+                            <constraint firstItem="xGk-jK-HdP" firstAttribute="width" secondItem="egv-PZ-jbn" secondAttribute="width" multiplier="0.5" id="qiU-UL-GuN"/>
+                            <constraint firstItem="xGk-jK-HdP" firstAttribute="leading" secondItem="egv-PZ-jbn" secondAttribute="leading" id="xBw-7X-coK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleView" destination="xGk-jK-HdP" id="muI-VA-AUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RaY-GJ-awS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="446"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dvC-8M-SJK">
