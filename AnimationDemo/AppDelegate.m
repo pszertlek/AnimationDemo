@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor colorWithRed:128./255 green:0 blue:0 alpha:1];
     UIViewController *navc = self.window.rootViewController;
     //logo mask
