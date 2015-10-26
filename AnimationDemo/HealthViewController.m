@@ -102,6 +102,7 @@ static HKHealthStore *healthStore;
         });
 
     }];
+    [healthStore executeQuery:query];
 }
 
 - (void)writeStepCount
