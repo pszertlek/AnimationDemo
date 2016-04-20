@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0551340477903EC208CE9E /* libPods-AnimationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D025CB9114D1555E06EEAA /* libPods-AnimationDemo.a */; };
+		F451CED71CC75D8B00CA2456 /* TQHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F451CED61CC75D8B00CA2456 /* TQHomeViewController.m */; };
 		F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */; };
 		F48989971BD627EE00F35F71 /* KYSlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989961BD627EE00F35F71 /* KYSlideMenuButton.m */; };
 		F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989991BD6280500F35F71 /* KYGooeySlideMenu.m */; };
@@ -27,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58DB2DF8C9384AB12EE4C3B0 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF7D7BE05295B9015B4A338F /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B7D025CB9114D1555E06EEAA /* libPods-AnimationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F451CED51CC75D8B00CA2456 /* TQHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQHomeViewController.h; sourceTree = "<group>"; };
+		F451CED61CC75D8B00CA2456 /* TQHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQHomeViewController.m; sourceTree = "<group>"; };
 		F48989921BD5F18000F35F71 /* KYCircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleAnimationViewController.h; sourceTree = "<group>"; };
 		F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCircleAnimationViewController.m; sourceTree = "<group>"; };
 		F48989951BD627EE00F35F71 /* KYSlideMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYSlideMenuButton.h; sourceTree = "<group>"; };
@@ -67,12 +74,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E562FD1BDD0059007429FB /* HealthKit.framework in Frameworks */,
+				3B0551340477903EC208CE9E /* libPods-AnimationDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37AF6C12EE6E93CF8A7E9CFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7D025CB9114D1555E06EEAA /* libPods-AnimationDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8105BAA4DEECE03C3874B87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58DB2DF8C9384AB12EE4C3B0 /* Pods-AnimationDemo.debug.xcconfig */,
+				AF7D7BE05295B9015B4A338F /* Pods-AnimationDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4E18DC41BD4BAFF00A4692B /* AnimatedCircleDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +131,13 @@
 			name = "New Group2";
 			sourceTree = "<group>";
 		};
-		F4E18DC71BD4BB0500A4692B /* New Group3 */ = {
+		F4E18DC71BD4BB0500A4692B /* AsyncDisplayKit */ = {
 			isa = PBXGroup;
 			children = (
+				F451CED51CC75D8B00CA2456 /* TQHomeViewController.h */,
+				F451CED61CC75D8B00CA2456 /* TQHomeViewController.m */,
 			);
-			name = "New Group3";
+			name = AsyncDisplayKit;
 			sourceTree = "<group>";
 		};
 		F4E18DC81BD4BB0700A4692B /* New Group4 */ = {
@@ -140,6 +167,8 @@
 				F4E562FC1BDD0059007429FB /* HealthKit.framework */,
 				F4E2DDD31BCE2CE600E8F357 /* AnimationDemo */,
 				F4E2DDD21BCE2CE600E8F357 /* Products */,
+				B8105BAA4DEECE03C3874B87 /* Pods */,
+				37AF6C12EE6E93CF8A7E9CFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +187,7 @@
 				F4E18DCA1BD4BB0B00A4692B /* New Group6 */,
 				F4E18DC91BD4BB0900A4692B /* New Group5 */,
 				F4E18DC81BD4BB0700A4692B /* New Group4 */,
-				F4E18DC71BD4BB0500A4692B /* New Group3 */,
+				F4E18DC71BD4BB0500A4692B /* AsyncDisplayKit */,
 				F4E18DC61BD4BB0400A4692B /* New Group2 */,
 				F4E18DC51BD4BB0200A4692B /* SlideMenu */,
 				F4E18DC41BD4BAFF00A4692B /* AnimatedCircleDemo */,
@@ -206,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4E2DDE81BCE2CE600E8F357 /* Build configuration list for PBXNativeTarget "AnimationDemo" */;
 			buildPhases = (
+				F4DDC1DE69912CB2A7D8CD49 /* Check Pods Manifest.lock */,
 				F4E2DDCD1BCE2CE600E8F357 /* Sources */,
 				F4E2DDCE1BCE2CE600E8F357 /* Frameworks */,
 				F4E2DDCF1BCE2CE600E8F357 /* Resources */,
+				BFC318ED4BC67A8A415A1CC9 /* Embed Pods Frameworks */,
+				FB7F7CA5243B6167C94B6B50 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +302,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BFC318ED4BC67A8A415A1CC9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4DDC1DE69912CB2A7D8CD49 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB7F7CA5243B6167C94B6B50 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4E2DDCD1BCE2CE600E8F357 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -285,6 +365,7 @@
 				F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */,
 				F4E18DD71BD52C1E00A4692B /* KYCircleLayer.m in Sources */,
 				F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */,
+				F451CED71CC75D8B00CA2456 /* TQHomeViewController.m in Sources */,
 				F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */,
 				F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */,
 				F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */,
@@ -397,6 +478,7 @@
 		};
 		F4E2DDE91BCE2CE600E8F357 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58DB2DF8C9384AB12EE4C3B0 /* Pods-AnimationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AnimationDemo/AnimationDemo.entitlements;
@@ -412,6 +494,7 @@
 		};
 		F4E2DDEA1BCE2CE600E8F357 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7D7BE05295B9015B4A338F /* Pods-AnimationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AnimationDemo/AnimationDemo.entitlements;
