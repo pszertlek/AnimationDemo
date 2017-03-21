@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B0551340477903EC208CE9E /* libPods-AnimationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D025CB9114D1555E06EEAA /* libPods-AnimationDemo.a */; };
-		F451CED71CC75D8B00CA2456 /* TQHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F451CED61CC75D8B00CA2456 /* TQHomeViewController.m */; };
+		183FD6D51E4854F200AF1CD8 /* ReactiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FD6D41E4854F200AF1CD8 /* ReactiveViewController.m */; };
+		189BE3711E4D9452008E06FB /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3701E4D9452008E06FB /* CustomViewController.m */; };
+		189BE3761E4D9480008E06FB /* BLSensorBubbleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3731E4D9480008E06FB /* BLSensorBubbleButton.m */; };
+		189BE3771E4D9480008E06FB /* BLSensorBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3751E4D9480008E06FB /* BLSensorBubbleView.m */; };
+		189BE37A1E4DA451008E06FB /* BLSensorViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3791E4DA451008E06FB /* BLSensorViewLayout.m */; };
+		65900306DEFE5CC7DC776E6D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13B46CB7D51C228DA0C87E /* Pods_AnimationDemo.framework */; };
 		F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */; };
 		F48989971BD627EE00F35F71 /* KYSlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989961BD627EE00F35F71 /* KYSlideMenuButton.m */; };
 		F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989991BD6280500F35F71 /* KYGooeySlideMenu.m */; };
@@ -29,11 +33,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58DB2DF8C9384AB12EE4C3B0 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		AF7D7BE05295B9015B4A338F /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
-		B7D025CB9114D1555E06EEAA /* libPods-AnimationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F451CED51CC75D8B00CA2456 /* TQHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQHomeViewController.h; sourceTree = "<group>"; };
-		F451CED61CC75D8B00CA2456 /* TQHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQHomeViewController.m; sourceTree = "<group>"; };
+		183FD6D31E4854F200AF1CD8 /* ReactiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveViewController.h; sourceTree = "<group>"; };
+		183FD6D41E4854F200AF1CD8 /* ReactiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveViewController.m; sourceTree = "<group>"; };
+		1882AB1D1E1CEFB70082198B /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Debug-iphoneos/ReactiveCocoa/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		189BE36F1E4D9452008E06FB /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		189BE3701E4D9452008E06FB /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		189BE3721E4D9480008E06FB /* BLSensorBubbleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSensorBubbleButton.h; sourceTree = "<group>"; };
+		189BE3731E4D9480008E06FB /* BLSensorBubbleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSensorBubbleButton.m; sourceTree = "<group>"; };
+		189BE3741E4D9480008E06FB /* BLSensorBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSensorBubbleView.h; sourceTree = "<group>"; };
+		189BE3751E4D9480008E06FB /* BLSensorBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSensorBubbleView.m; sourceTree = "<group>"; };
+		189BE3781E4DA451008E06FB /* BLSensorViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSensorViewLayout.h; sourceTree = "<group>"; };
+		189BE3791E4DA451008E06FB /* BLSensorViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSensorViewLayout.m; sourceTree = "<group>"; };
+		478650236AD641DC2B244DF0 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DF13B46CB7D51C228DA0C87E /* Pods_AnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48989921BD5F18000F35F71 /* KYCircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleAnimationViewController.h; sourceTree = "<group>"; };
 		F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCircleAnimationViewController.m; sourceTree = "<group>"; };
 		F48989951BD627EE00F35F71 /* KYSlideMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYSlideMenuButton.h; sourceTree = "<group>"; };
@@ -66,6 +78,7 @@
 		F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuButton.m; sourceTree = "<group>"; };
 		F4E766861BD0F4B500FA8C2E /* PushControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushControl.h; sourceTree = "<group>"; };
 		F4E766871BD0F4B500FA8C2E /* PushControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushControl.m; sourceTree = "<group>"; };
+		FFC27DE111A0818DDD622B56 /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,28 +87,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E562FD1BDD0059007429FB /* HealthKit.framework in Frameworks */,
-				3B0551340477903EC208CE9E /* libPods-AnimationDemo.a in Frameworks */,
+				65900306DEFE5CC7DC776E6D /* Pods_AnimationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37AF6C12EE6E93CF8A7E9CFD /* Frameworks */ = {
+		1D201E0DA0AE18D4DFFDAD2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B7D025CB9114D1555E06EEAA /* libPods-AnimationDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B8105BAA4DEECE03C3874B87 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				58DB2DF8C9384AB12EE4C3B0 /* Pods-AnimationDemo.debug.xcconfig */,
-				AF7D7BE05295B9015B4A338F /* Pods-AnimationDemo.release.xcconfig */,
+				478650236AD641DC2B244DF0 /* Pods-AnimationDemo.debug.xcconfig */,
+				FFC27DE111A0818DDD622B56 /* Pods-AnimationDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		22C741968A5EEEF0DA261615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1882AB1D1E1CEFB70082198B /* ReactiveCocoa.framework */,
+				DF13B46CB7D51C228DA0C87E /* Pods_AnimationDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F4E18DC41BD4BAFF00A4692B /* AnimatedCircleDemo */ = {
@@ -122,36 +136,37 @@
 			name = SlideMenu;
 			sourceTree = "<group>";
 		};
-		F4E18DC61BD4BB0400A4692B /* New Group2 */ = {
+		F4E18DC61BD4BB0400A4692B /* HealthDemo */ = {
 			isa = PBXGroup;
 			children = (
 				F4E562F91BDCAFC2007429FB /* HealthViewController.h */,
 				F4E562FA1BDCAFC2007429FB /* HealthViewController.m */,
 			);
-			name = "New Group2";
+			name = HealthDemo;
 			sourceTree = "<group>";
 		};
-		F4E18DC71BD4BB0500A4692B /* AsyncDisplayKit */ = {
+		F4E18DC81BD4BB0700A4692B /* ReactiveCocoaDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F451CED51CC75D8B00CA2456 /* TQHomeViewController.h */,
-				F451CED61CC75D8B00CA2456 /* TQHomeViewController.m */,
+				183FD6D31E4854F200AF1CD8 /* ReactiveViewController.h */,
+				183FD6D41E4854F200AF1CD8 /* ReactiveViewController.m */,
 			);
-			name = AsyncDisplayKit;
+			name = ReactiveCocoaDemo;
 			sourceTree = "<group>";
 		};
-		F4E18DC81BD4BB0700A4692B /* New Group4 */ = {
+		F4E18DC91BD4BB0900A4692B /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				189BE3721E4D9480008E06FB /* BLSensorBubbleButton.h */,
+				189BE3731E4D9480008E06FB /* BLSensorBubbleButton.m */,
+				189BE3741E4D9480008E06FB /* BLSensorBubbleView.h */,
+				189BE3751E4D9480008E06FB /* BLSensorBubbleView.m */,
+				189BE3781E4DA451008E06FB /* BLSensorViewLayout.h */,
+				189BE3791E4DA451008E06FB /* BLSensorViewLayout.m */,
+				189BE36F1E4D9452008E06FB /* CustomViewController.h */,
+				189BE3701E4D9452008E06FB /* CustomViewController.m */,
 			);
-			name = "New Group4";
-			sourceTree = "<group>";
-		};
-		F4E18DC91BD4BB0900A4692B /* New Group5 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group5";
+			name = custom;
 			sourceTree = "<group>";
 		};
 		F4E18DCA1BD4BB0B00A4692B /* New Group6 */ = {
@@ -167,8 +182,8 @@
 				F4E562FC1BDD0059007429FB /* HealthKit.framework */,
 				F4E2DDD31BCE2CE600E8F357 /* AnimationDemo */,
 				F4E2DDD21BCE2CE600E8F357 /* Products */,
-				B8105BAA4DEECE03C3874B87 /* Pods */,
-				37AF6C12EE6E93CF8A7E9CFD /* Frameworks */,
+				1D201E0DA0AE18D4DFFDAD2D /* Pods */,
+				22C741968A5EEEF0DA261615 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,10 +200,9 @@
 			children = (
 				F4E562FE1BDD0059007429FB /* AnimationDemo.entitlements */,
 				F4E18DCA1BD4BB0B00A4692B /* New Group6 */,
-				F4E18DC91BD4BB0900A4692B /* New Group5 */,
-				F4E18DC81BD4BB0700A4692B /* New Group4 */,
-				F4E18DC71BD4BB0500A4692B /* AsyncDisplayKit */,
-				F4E18DC61BD4BB0400A4692B /* New Group2 */,
+				F4E18DC91BD4BB0900A4692B /* custom */,
+				F4E18DC81BD4BB0700A4692B /* ReactiveCocoaDemo */,
+				F4E18DC61BD4BB0400A4692B /* HealthDemo */,
 				F4E18DC51BD4BB0200A4692B /* SlideMenu */,
 				F4E18DC41BD4BAFF00A4692B /* AnimatedCircleDemo */,
 				F4E7667F1BD0ECFB00FA8C2E /* GooeySlideMenu */,
@@ -235,12 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4E2DDE81BCE2CE600E8F357 /* Build configuration list for PBXNativeTarget "AnimationDemo" */;
 			buildPhases = (
-				F4DDC1DE69912CB2A7D8CD49 /* Check Pods Manifest.lock */,
+				C833B2C95F13464AC2C8255E /* [CP] Check Pods Manifest.lock */,
 				F4E2DDCD1BCE2CE600E8F357 /* Sources */,
 				F4E2DDCE1BCE2CE600E8F357 /* Frameworks */,
 				F4E2DDCF1BCE2CE600E8F357 /* Resources */,
-				BFC318ED4BC67A8A415A1CC9 /* Embed Pods Frameworks */,
-				FB7F7CA5243B6167C94B6B50 /* Copy Pods Resources */,
+				13CE7E0A56E46A8C03E33322 /* [CP] Embed Pods Frameworks */,
+				73E564E5036E864C9CE90556 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +277,7 @@
 					F4E2DDD01BCE2CE600E8F357 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 32FCLEE8GX;
+						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -303,14 +318,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BFC318ED4BC67A8A415A1CC9 /* Embed Pods Frameworks */ = {
+		13CE7E0A56E46A8C03E33322 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,34 +333,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4DDC1DE69912CB2A7D8CD49 /* Check Pods Manifest.lock */ = {
+		73E564E5036E864C9CE90556 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FB7F7CA5243B6167C94B6B50 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C833B2C95F13464AC2C8255E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -356,18 +371,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E562FB1BDCAFC2007429FB /* HealthViewController.m in Sources */,
+				189BE3761E4D9480008E06FB /* BLSensorBubbleButton.m in Sources */,
+				189BE3711E4D9452008E06FB /* CustomViewController.m in Sources */,
 				F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */,
 				F4E2DDDC1BCE2CE600E8F357 /* ViewController.m in Sources */,
 				F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */,
 				F4E2DDD91BCE2CE600E8F357 /* AppDelegate.m in Sources */,
+				183FD6D51E4854F200AF1CD8 /* ReactiveViewController.m in Sources */,
 				F4E18DDA1BD52C3A00A4692B /* KYCircleView.m in Sources */,
 				F48989971BD627EE00F35F71 /* KYSlideMenuButton.m in Sources */,
 				F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */,
 				F4E18DD71BD52C1E00A4692B /* KYCircleLayer.m in Sources */,
 				F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */,
-				F451CED71CC75D8B00CA2456 /* TQHomeViewController.m in Sources */,
+				189BE3771E4D9480008E06FB /* BLSensorBubbleView.m in Sources */,
 				F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */,
 				F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */,
+				189BE37A1E4DA451008E06FB /* BLSensorViewLayout.m in Sources */,
 				F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,35 +497,45 @@
 		};
 		F4E2DDE91BCE2CE600E8F357 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58DB2DF8C9384AB12EE4C3B0 /* Pods-AnimationDemo.debug.xcconfig */;
+			baseConfigurationReference = 478650236AD641DC2B244DF0 /* Pods-AnimationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AnimationDemo/AnimationDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveCocoa",
+				);
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F4E2DDEA1BCE2CE600E8F357 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF7D7BE05295B9015B4A338F /* Pods-AnimationDemo.release.xcconfig */;
+			baseConfigurationReference = FFC27DE111A0818DDD622B56 /* Pods-AnimationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AnimationDemo/AnimationDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveCocoa",
+				);
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.AnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
