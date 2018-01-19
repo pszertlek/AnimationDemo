@@ -7,7 +7,6 @@
 //
 
 #import "CustomViewController.h"
-#import "BLSensorBubbleView.h"
 
 @interface CustomViewController ()
 
@@ -18,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    BLSensorBubbleView *view = [[BLSensorBubbleView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
-    [self.view addSubview:view];
+
 }
 
 - (void)didReceiveMemoryWarning {

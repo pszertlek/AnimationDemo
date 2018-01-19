@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		183FD6D51E4854F200AF1CD8 /* ReactiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FD6D41E4854F200AF1CD8 /* ReactiveViewController.m */; };
 		189BE3711E4D9452008E06FB /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3701E4D9452008E06FB /* CustomViewController.m */; };
-		189BE3761E4D9480008E06FB /* BLSensorBubbleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3731E4D9480008E06FB /* BLSensorBubbleButton.m */; };
-		189BE3771E4D9480008E06FB /* BLSensorBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3751E4D9480008E06FB /* BLSensorBubbleView.m */; };
 		189BE37A1E4DA451008E06FB /* BLSensorViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3791E4DA451008E06FB /* BLSensorViewLayout.m */; };
+		18F06C0D1E8363F2003CDFB4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F06C0C1E8363F2003CDFB4 /* HealthKit.framework */; };
 		65900306DEFE5CC7DC776E6D /* Pods_AnimationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13B46CB7D51C228DA0C87E /* Pods_AnimationDemo.framework */; };
 		F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989931BD5F18000F35F71 /* KYCircleAnimationViewController.m */; };
 		F48989971BD627EE00F35F71 /* KYSlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F48989961BD627EE00F35F71 /* KYSlideMenuButton.m */; };
@@ -26,7 +25,6 @@
 		F4E2DDE41BCE2CE600E8F357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DDE21BCE2CE600E8F357 /* LaunchScreen.storyboard */; };
 		F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDEF1BCE2E6800E8F357 /* AnimationListViewController.m */; };
 		F4E562FB1BDCAFC2007429FB /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E562FA1BDCAFC2007429FB /* HealthViewController.m */; };
-		F4E562FD1BDD0059007429FB /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E562FC1BDD0059007429FB /* HealthKit.framework */; };
 		F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */; };
 		F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */; };
 		F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766871BD0F4B500FA8C2E /* PushControl.m */; };
@@ -38,12 +36,9 @@
 		1882AB1D1E1CEFB70082198B /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Debug-iphoneos/ReactiveCocoa/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 		189BE36F1E4D9452008E06FB /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		189BE3701E4D9452008E06FB /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
-		189BE3721E4D9480008E06FB /* BLSensorBubbleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSensorBubbleButton.h; sourceTree = "<group>"; };
-		189BE3731E4D9480008E06FB /* BLSensorBubbleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSensorBubbleButton.m; sourceTree = "<group>"; };
-		189BE3741E4D9480008E06FB /* BLSensorBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSensorBubbleView.h; sourceTree = "<group>"; };
-		189BE3751E4D9480008E06FB /* BLSensorBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSensorBubbleView.m; sourceTree = "<group>"; };
 		189BE3781E4DA451008E06FB /* BLSensorViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSensorViewLayout.h; sourceTree = "<group>"; };
 		189BE3791E4DA451008E06FB /* BLSensorViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSensorViewLayout.m; sourceTree = "<group>"; };
+		18F06C0C1E8363F2003CDFB4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		478650236AD641DC2B244DF0 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DF13B46CB7D51C228DA0C87E /* Pods_AnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48989921BD5F18000F35F71 /* KYCircleAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCircleAnimationViewController.h; sourceTree = "<group>"; };
@@ -70,7 +65,6 @@
 		F4E2DDEF1BCE2E6800E8F357 /* AnimationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationListViewController.m; sourceTree = "<group>"; };
 		F4E562F91BDCAFC2007429FB /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
 		F4E562FA1BDCAFC2007429FB /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
-		F4E562FC1BDD0059007429FB /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F4E562FE1BDD0059007429FB /* AnimationDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AnimationDemo.entitlements; sourceTree = "<group>"; };
 		F4E766801BD0ED1000FA8C2E /* GooeySlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooeySlideMenu.h; sourceTree = "<group>"; };
 		F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooeySlideMenu.m; sourceTree = "<group>"; };
@@ -86,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4E562FD1BDD0059007429FB /* HealthKit.framework in Frameworks */,
 				65900306DEFE5CC7DC776E6D /* Pods_AnimationDemo.framework in Frameworks */,
+				18F06C0D1E8363F2003CDFB4 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +100,7 @@
 		22C741968A5EEEF0DA261615 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18F06C0C1E8363F2003CDFB4 /* HealthKit.framework */,
 				1882AB1D1E1CEFB70082198B /* ReactiveCocoa.framework */,
 				DF13B46CB7D51C228DA0C87E /* Pods_AnimationDemo.framework */,
 			);
@@ -157,10 +152,6 @@
 		F4E18DC91BD4BB0900A4692B /* custom */ = {
 			isa = PBXGroup;
 			children = (
-				189BE3721E4D9480008E06FB /* BLSensorBubbleButton.h */,
-				189BE3731E4D9480008E06FB /* BLSensorBubbleButton.m */,
-				189BE3741E4D9480008E06FB /* BLSensorBubbleView.h */,
-				189BE3751E4D9480008E06FB /* BLSensorBubbleView.m */,
 				189BE3781E4DA451008E06FB /* BLSensorViewLayout.h */,
 				189BE3791E4DA451008E06FB /* BLSensorViewLayout.m */,
 				189BE36F1E4D9452008E06FB /* CustomViewController.h */,
@@ -179,7 +170,6 @@
 		F4E2DDC81BCE2CE600E8F357 = {
 			isa = PBXGroup;
 			children = (
-				F4E562FC1BDD0059007429FB /* HealthKit.framework */,
 				F4E2DDD31BCE2CE600E8F357 /* AnimationDemo */,
 				F4E2DDD21BCE2CE600E8F357 /* Products */,
 				1D201E0DA0AE18D4DFFDAD2D /* Pods */,
@@ -276,7 +266,7 @@
 				TargetAttributes = {
 					F4E2DDD01BCE2CE600E8F357 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 32FCLEE8GX;
+						DevelopmentTeam = WEZ4TNATDY;
 						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -371,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E562FB1BDCAFC2007429FB /* HealthViewController.m in Sources */,
-				189BE3761E4D9480008E06FB /* BLSensorBubbleButton.m in Sources */,
 				189BE3711E4D9452008E06FB /* CustomViewController.m in Sources */,
 				F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */,
 				F4E2DDDC1BCE2CE600E8F357 /* ViewController.m in Sources */,
@@ -383,7 +372,6 @@
 				F4E2DDD61BCE2CE600E8F357 /* main.m in Sources */,
 				F4E18DD71BD52C1E00A4692B /* KYCircleLayer.m in Sources */,
 				F48989941BD5F18000F35F71 /* KYCircleAnimationViewController.m in Sources */,
-				189BE3771E4D9480008E06FB /* BLSensorBubbleView.m in Sources */,
 				F4E2DDF01BCE2E6800E8F357 /* AnimationListViewController.m in Sources */,
 				F489899A1BD6280500F35F71 /* KYGooeySlideMenu.m in Sources */,
 				189BE37A1E4DA451008E06FB /* BLSensorViewLayout.m in Sources */,
@@ -499,10 +487,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 478650236AD641DC2B244DF0 /* Pods-AnimationDemo.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AnimationDemo/AnimationDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WEZ4TNATDY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveCocoa",
@@ -510,7 +498,7 @@
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.AnimationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = broadlink.com.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -521,10 +509,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFC27DE111A0818DDD622B56 /* Pods-AnimationDemo.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AnimationDemo/AnimationDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WEZ4TNATDY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveCocoa",
@@ -532,7 +520,7 @@
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.AnimationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = broadlink.com.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
