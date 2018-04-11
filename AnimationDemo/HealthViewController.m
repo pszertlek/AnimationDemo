@@ -32,15 +32,11 @@ static HKHealthStore *healthStore;
         NSSet *readSet =[NSSet setWithObject:[HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount]];
         [healthStore requestAuthorizationToShareTypes:writeSet readTypes:readSet completion:^(BOOL success, NSError * _Nullable error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (success) {
-                    
-                }
-                else{
+                if (!success) {
                     self.alertController = [UIAlertController alertControllerWithTitle:@"失败" message:@"请选择支持当前选择" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
                     [self.alertController addAction:okAction];
                     [self presentViewController:self.alertController animated:YES completion:nil];
-
                 }
             });
         }];

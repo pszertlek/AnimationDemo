@@ -53,29 +53,12 @@
     NSDictionary *attr = @{NSParagraphStyleAttributeName:paragraphStyle,NSFontAttributeName:[UIFont systemFontOfSize:24.0f],NSForegroundColorAttributeName:[UIColor whiteColor]};
     CGSize size = [self.buttonTitle sizeWithAttributes:attr];
     
-    CGRect r = CGRectMake(rect.origin.x,
+    CGRect r11 = CGRectMake(rect.origin.x,
                           rect.origin.y + (rect.size.height - size.height)/2.0,
                           rect.size.width,
                           size.height);
 
-    [self.buttonTitle drawInRect:r withAttributes:attr];
-    
-}
-
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    NSUInteger tapCount = touch.tapCount;
-    
-    
-    switch (tapCount) {
-        case 1:
-            self.buttonClickBlock();
-            break;
-    
-        default:
-            break;
-    }
+    [self.buttonTitle drawInRect:r11 withAttributes:attr];
     
 }
 

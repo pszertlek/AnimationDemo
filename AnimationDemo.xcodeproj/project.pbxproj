@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		183A7382207DE6470086FDA7 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 183A7383207DE6470086FDA7 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				183A7386207DE6600086FDA7 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		183FD6D51E4854F200AF1CD8 /* ReactiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FD6D41E4854F200AF1CD8 /* ReactiveViewController.m */; };
 		189BE3711E4D9452008E06FB /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BE3701E4D9452008E06FB /* CustomViewController.m */; };
@@ -27,7 +41,6 @@
 		F4E562FB1BDCAFC2007429FB /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E562FA1BDCAFC2007429FB /* HealthViewController.m */; };
 		F4E766841BD0ED1800FA8C2E /* GooeySlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */; };
 		F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */; };
-		F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E766871BD0F4B500FA8C2E /* PushControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,8 +83,6 @@
 		F4E766811BD0ED1800FA8C2E /* GooeySlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooeySlideMenu.m; sourceTree = "<group>"; };
 		F4E766821BD0ED1800FA8C2E /* SlideMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuButton.h; sourceTree = "<group>"; };
 		F4E766831BD0ED1800FA8C2E /* SlideMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuButton.m; sourceTree = "<group>"; };
-		F4E766861BD0F4B500FA8C2E /* PushControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushControl.h; sourceTree = "<group>"; };
-		F4E766871BD0F4B500FA8C2E /* PushControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushControl.m; sourceTree = "<group>"; };
 		FFC27DE111A0818DDD622B56 /* Pods-AnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,8 +213,6 @@
 				F4E2DDDB1BCE2CE600E8F357 /* ViewController.m */,
 				F4E2DDEE1BCE2E6800E8F357 /* AnimationListViewController.h */,
 				F4E2DDEF1BCE2E6800E8F357 /* AnimationListViewController.m */,
-				F4E766861BD0F4B500FA8C2E /* PushControl.h */,
-				F4E766871BD0F4B500FA8C2E /* PushControl.m */,
 				F4E2DDDD1BCE2CE600E8F357 /* Main.storyboard */,
 				F4E2DDE01BCE2CE600E8F357 /* Assets.xcassets */,
 				F4E2DDE21BCE2CE600E8F357 /* LaunchScreen.storyboard */,
@@ -264,6 +273,11 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Pszertlek;
 				TargetAttributes = {
+					183A7382207DE6470086FDA7 = {
+						CreatedOnToolsVersion = 9.3;
+						DevelopmentTeam = WEZ4TNATDY;
+						ProvisioningStyle = Automatic;
+					};
 					F4E2DDD01BCE2CE600E8F357 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = WEZ4TNATDY;
@@ -290,6 +304,7 @@
 			projectRoot = "";
 			targets = (
 				F4E2DDD01BCE2CE600E8F357 /* AnimationDemo */,
+				183A7382207DE6470086FDA7 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -322,6 +337,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		183A7386207DE6600086FDA7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source ~/.bash_profile\n\ncd ${PROJECT_DIR}\n\nxcodebuild clean\n\nxcodebuild  -workspace       AnimationDemo.xcworkspace \\\n-scheme          AnimationDemo \\\n-configuration   Debug \\\n-sdks            iphonesimulator11.3 \\\n-arch         x86_64\nbuild | xcpretty -r json-compilation-database -o compile_commands.json\n\noclint-json-compilation-database -- -report-type xcode";
 		};
 		73E564E5036E864C9CE90556 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -364,7 +392,6 @@
 				189BE3711E4D9452008E06FB /* CustomViewController.m in Sources */,
 				F4E766851BD0ED1800FA8C2E /* SlideMenuButton.m in Sources */,
 				F4E2DDDC1BCE2CE600E8F357 /* ViewController.m in Sources */,
-				F4E766881BD0F4B500FA8C2E /* PushControl.m in Sources */,
 				F4E2DDD91BCE2CE600E8F357 /* AppDelegate.m in Sources */,
 				183FD6D51E4854F200AF1CD8 /* ReactiveViewController.m in Sources */,
 				F4E18DDA1BD52C3A00A4692B /* KYCircleView.m in Sources */,
@@ -401,6 +428,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		183A7384207DE6470086FDA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WEZ4TNATDY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		183A7385207DE6470086FDA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WEZ4TNATDY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F4E2DDE61BCE2CE600E8F357 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -530,6 +575,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		183A7383207DE6470086FDA7 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183A7384207DE6470086FDA7 /* Debug */,
+				183A7385207DE6470086FDA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F4E2DDCC1BCE2CE600E8F357 /* Build configuration list for PBXProject "AnimationDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

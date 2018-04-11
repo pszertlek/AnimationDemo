@@ -8,7 +8,6 @@
 
 #import "AnimationListViewController.h"
 #import "GooeySlideMenu.h"
-#import "PushControl.h"
 #import "ViewController.h"
 #import "KYGooeySlideMenu.h"
 

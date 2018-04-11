@@ -7,8 +7,7 @@
 //
 
 #import "ReactiveViewController.h"
-#import "ReactiveCocoa.h"
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
 @interface ReactiveViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
